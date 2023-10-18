@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i<10)
+{
+i="0" + i;
+}
+return i;
+}
+</script>
+
+
 <meta charset="utf-8">
 <center>
+<br><br><br><br><br>
 
 <head>
-  <title>AuraO1</title>
+  <link rel="icon" type="image/x-icon" href="sites/file.jpg">
+  <title>Jeevan Kanniganti</title>
 </head>
-<h1>WH1T3R0S3</h1>
-<body>
+<i><h1 style="font-size:60px;">Jeevan Kanniganti</h1></i>
+<body onload="startTime()">
+<div id="txt"></div>
 </body>
+<body></body><br>
 
+<a href="sites/about.html"> About </a>//<a href="sites/contact.html"> contact </a>//<a href="https://www.youtube.com/@garlicudon/featured"> youtube </a>//<a href="sites/faq.html"> faq </a>//<a href="sites/resume.html"> resume </a>
 </center>
 </html>
